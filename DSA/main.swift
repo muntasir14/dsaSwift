@@ -67,4 +67,15 @@ import Foundation
 //print(Leet1732().largestAltitude([-4,-3,-2,-1,4,3,2]))
 
 
-print(Leet724().pivotIndex([-1,-1,0,0,-1,-1]))
+//print(Leet724().pivotIndex([-1,-1,0,0,-1,-1]))
+
+
+//print(Leet2215().findDifference([1,2,3,3], [1,1,2,2]))
+
+//print(Leet1207().uniqueOccurrences([1, 2, 2, 1, 1, 3]))
+
+
+//print(Leet1657().closeStrings("uau", "ssx"))
+
+
+print(Leet2352().equalPairs([[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]))
