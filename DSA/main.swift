@@ -78,4 +78,7 @@ import Foundation
 //print(Leet1657().closeStrings("uau", "ssx"))
 
 
-print(Leet2352().equalPairs([[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]))
+//print(Leet2352().equalPairs([[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]))
+
+
+print(Leet2390().removeStars("u*ensso****x*q"))
