@@ -12,8 +12,8 @@ import Foundation
 class Leet2215 {
     func findDifference(_ nums1: [Int], _ nums2: [Int]) -> [[Int]] {
         var answer: [[Int]] = Array(repeating: [], count: 2)
-        var nums1: Set<Int> = Set(nums1)
-        var nums2: Set<Int> = Set(nums2)
+        let nums1: Set<Int> = Set(nums1)
+        let nums2: Set<Int> = Set(nums2)
         
         for num in nums1 {
             if !nums2.contains(num) {

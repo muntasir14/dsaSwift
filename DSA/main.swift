@@ -81,4 +81,19 @@ import Foundation
 //print(Leet2352().equalPairs([[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]))
 
 
-print(Leet2390().removeStars("u*ensso****x*q"))
+//print(Leet2390().removeStars("u*ensso****x*q"))
+
+//print(Leet735().asteroidCollision([-2,2,1,-2]))
+
+//print(Leet394().decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"))
+
+// [[],[642],[1849],[4921],[5936],[5957]]
+//var recentCounter =  Leet933()
+//print(recentCounter.ping(642))
+//print(recentCounter.ping(1849))
+//print(recentCounter.ping(4921))
+//print(recentCounter.ping(5936))
+//print(recentCounter.ping(5957))
+
+
+print(Leet649().predictPartyVictory("RDDRD"))

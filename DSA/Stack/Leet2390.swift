@@ -18,7 +18,6 @@ class Leet2390 {
             self.char = char
             self.next = next
         }
-        
     }
     
     struct Stack {
