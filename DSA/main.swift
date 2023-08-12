@@ -96,4 +96,29 @@ import Foundation
 //print(recentCounter.ping(5957))
 
 
-print(Leet649().predictPartyVictory("RDDRD"))
+//print(Leet649().predictPartyVictory("RDDRD"))
+func printList(head: ListNode?) {
+    var temp = head
+    while temp != nil {
+        print(temp!.val, terminator: " ")
+        temp = temp?.next
+    }
+    print()
+}
+let arr = [1, 2]
+let head = ListNode(1)
+var temp: ListNode? = head
+for i in 1..<arr.count {
+    let l = ListNode(arr[i])
+    temp!.next = l
+    temp = temp!.next
+}
+
+//let _ = Leet2095().deleteMiddle(head)
+//printList(head: head)
+
+//let _ = Leet328().oddEvenList(nil)
+//printList(head: head)
+
+
+printList(head: Leet206().reverseList(head))
