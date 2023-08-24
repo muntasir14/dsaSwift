@@ -121,4 +121,19 @@ for i in 1..<arr.count {
 //printList(head: head)
 
 
-printList(head: Leet206().reverseList(head))
+//printList(head: Leet206().reverseList(head))
+
+
+
+
+//var node: TreeNode? = TreeNode(3, nil, nil)
+//
+//print(node!.val)
+//testFunc(&node)
+//print(node)
+
+
+
+// Graphs
+
+print(Leet841().canVisitAllRooms([[1,3],[3,0,1],[2],[0]]))

@@ -10,17 +10,33 @@ import Foundation
 // Delete Node in a BST
 class Leet450 {
     
+    func findMin(_ node: TreeNode) -> TreeNode? {
+        if node.left == nil { return node }
+        return findMin(node.left!)
+    }
+    
     func deleteNode(_ root: TreeNode?, _ key: Int) -> TreeNode? {
-        guard var newRoot = root else { return nil }
-        var temp = root
-        while temp != nil {
-            if temp!.val == key {
+        
+        guard root != nil else { return root }
+        var newRoot = root
+        if newRoot!.val > key { newRoot!.left = deleteNode(newRoot!.left, key)}
+        else if newRoot!.val < key { newRoot!.right = deleteNode(newRoot!.right, key)}
+        
+        else {
+            
+            if newRoot!.left == nil && newRoot!.right == nil {
+                newRoot = nil
+            } else if newRoot!.left == nil {
+                newRoot = newRoot!.right
+            } else if newRoot!.right == nil {
+                newRoot = newRoot!.left
+            } else {
                 
-                if temp!.left == nil && temp!.right == nil { }
-                
+                var temp = findMin(newRoot!.right!)
+                newRoot!.val = temp!.val
+                newRoot!.right = deleteNode(newRoot!.right, temp!.val)
             }
-            else if temp!.val < key { temp = temp!.right }
-            else if temp!.val > key { temp = temp!.left }
+            
         }
         
         return newRoot
