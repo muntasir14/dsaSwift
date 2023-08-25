@@ -8,3 +8,12 @@
 import Foundation
 
 
+struct Landmark: Codable {
+    var name: String
+    var foundingYear: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "title"
+        case foundingYear = "founding_date"
+    }
+}

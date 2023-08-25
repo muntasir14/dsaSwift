@@ -136,4 +136,7 @@ for i in 1..<arr.count {
 
 // Graphs
 
-print(Leet841().canVisitAllRooms([[1,3],[3,0,1],[2],[0]]))
+//print(Leet841().canVisitAllRooms([[1,3],[3,0,1],[2],[0]]))
+
+
+print(Leet547().findCircleNum([[1,1,0],[1,1,0],[0,0,1]]))
