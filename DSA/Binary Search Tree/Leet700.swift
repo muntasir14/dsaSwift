@@ -9,7 +9,7 @@ import Foundation
 
 
 // Search in a Binary Search Tree
-class Solution {
+class Leet700 {
     
     func searchBST(_ root: TreeNode?, _ val: Int) -> TreeNode? {
         var temp = root
