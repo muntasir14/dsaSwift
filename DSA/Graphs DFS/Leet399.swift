@@ -18,19 +18,27 @@ class Leet399 {
             relations[equation[0], default: []].append((div: equation[1], val: values[i]))
             relations[equation[1], default: []].append((div: equation[0], val: (1 / values[i])))
         }
-        //var visited = Array(repeating: false, count: relations.keys.count)
-        func dfs(current: String, key: String, prev: String) -> (val: Double, found: Bool) {
-            let list = relations[current]
+        
+        var visited: [String : Bool] = [:]
+        func dfs(current: String, key: String) -> (val: Double, found: Bool) {
+            
+            if visited[current] != nil { return (val: 1.0, found: false)}
+            if current == key { return (val: 1.0, found: true)}
+            visited[current] = true
+            let list = relations[current]!
             var result = 1.0
-            var outCome = (val: 1.0, found: false)
-            for item in list! {
-                if item.div == key { return (item.val, true) }
-                if item.div == prev { continue }
-//                print("current", current, "item", item)
-                outCome = dfs(current: item.div, key: key, prev: current)
-                result *= (outCome.found ? item.val : 1.0) * outCome.val
+            for item in list {
+                result = 1.0
+                let res = dfs(current: item.div, key: key)
+                if res.found {
+                    result *= item.val * res.val
+                    return (val: result, found: true)
+                } else {
+                    result = -1.0
+                }
             }
-            return (result, outCome.found)
+            
+            return (val: result, found: false)
         }
         
         for (i, query) in queries.enumerated() {
@@ -38,9 +46,9 @@ class Leet399 {
             let xList = relations[query[0]]
             let yList = relations[query[1]]
             if xList == nil || yList == nil { continue }
-            let res = dfs(current: query[0], key: query[1], prev: "")
-            result[i] = res.found ? res.val : -1.0
-//            print("query", query, "res", res, terminator: "\n\n\n")
+            visited = [:]
+            let res = dfs(current: query[0], key: query[1])
+            result[i] = res.val
         }
         
         return result
