@@ -144,4 +144,10 @@ for i in 1..<arr.count {
 
 //print(Leet1466().minReorder(6, [[0,1],[1,3],[2,3],[4,0],[4,5]]))
 
-print(Leet399().calcEquation(equations: [["x1","x2"],["x2","x3"],["x3","x4"],["x4","x5"]], values: [3.0,4.0,5.0,6.0], queries: [["x1","x5"],["x5","x2"],["x2","x4"],["x2","x2"],["x2","x9"],["x9","x9"]]))
+//print(Leet399().calcEquation(equations: [["x1","x2"],["x2","x3"],["x3","x4"],["x4","x5"]], values: [3.0,4.0,5.0,6.0], queries: [["x1","x5"],["x5","x2"],["x2","x4"],["x2","x2"],["x2","x9"],["x9","x9"]]))
+
+
+//print(Leet1926().nearestExit([[".","+"]], [0,0]))
+
+
+print(Leet994().orangesRotting([[2,1,1],[1,1,0],[0,1,1]]))
